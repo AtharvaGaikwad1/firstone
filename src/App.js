@@ -22,6 +22,8 @@ function App() {
     },
   ];
   return (
+
+    // here we use props whicha are baicaly like paramenters and give data to functions 
     <div className="App">
       <h2>Expense App</h2>
       <ExpenseItem
