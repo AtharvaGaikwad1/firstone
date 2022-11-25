@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import "./components/ExpenseItem";
 import ExpenseItem from "./components/ExpenseItem";
+import Expesnses from "./components/Expenses";
 
 function App() {
   const arrOfDummy = [
@@ -26,21 +27,7 @@ function App() {
     // here we use props whicha are baicaly like paramenters and give data to functions 
     <div className="App">
       <h2>Expense App</h2>
-      <ExpenseItem
-        title={arrOfDummy[0].title}
-        amount={arrOfDummy[0].amount}
-        time={arrOfDummy[0].time}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={arrOfDummy[1].title}
-        amount={arrOfDummy[1].amount}
-        time={arrOfDummy[1].time}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={arrOfDummy[2].title}
-        amount={arrOfDummy[2].amount}
-        time={arrOfDummy[2].time}
-      ></ExpenseItem>
+      <Expesnses arrOfDummy = {arrOfDummy}></Expesnses>
     </div>
   );
 }

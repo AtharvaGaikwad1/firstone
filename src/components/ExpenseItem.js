@@ -1,26 +1,18 @@
-import './ExpenseItem.css';
-
-
-function ExpenseItem(props){
-    const demoDate = new Date(2001,5,29);
-    const expenseDemoTitle = " Purse ";
-    const expenseAmount = 21.21
-
-
-    return(
-        <>
-        <div className = 'expense-item'>
-            <div className = "expense-item__description">
-             {props.time.toString()}
-            </div>
-            <div>
-                <h3> {props.title}</h3>
-                <div className = "expense-item__price">${props.amount}</div>
-            </div>
-        </div>
-        
-        </>
-    )
+import Card from "./Card";
+import "./ExpenseItem.css";
+import ExpenseDateFaltu from "./ExpeseDateFaltu";
+function ExpenseItem(props) {
+  return (
+    <Card className="expense-item">
+      <ExpenseDateFaltu date={props.time} />
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
+      </div>
+      <div>
+        <div className="expense-item__price">${props.amount}</div>
+      </div>
+    </Card>
+  );
 }
 
-export default  ExpenseItem;
+export default ExpenseItem;
