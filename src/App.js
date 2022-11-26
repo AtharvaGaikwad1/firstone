@@ -1,9 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./components/ExpenseItem";
-import ExpenseItem from "./components/ExpenseItem";
-import Expesnses from "./components/Expenses";
 
+import Expesnses from "./components/Expenses";
+import NewExpense from "./components/NewExpense";
 function App() {
   const arrOfDummy = [
     {
@@ -23,11 +23,10 @@ function App() {
     },
   ];
   return (
-
-    // here we use props whicha are baicaly like paramenters and give data to functions 
+    // here we use props whicha are baicaly like paramenters and give data to functions
     <div className="App">
-      <h2>Expense App</h2>
-      <Expesnses arrOfDummy = {arrOfDummy}></Expesnses>
+      <NewExpense />
+      <Expesnses arrOfDummy={arrOfDummy}></Expesnses>
     </div>
   );
 }
