@@ -5,7 +5,7 @@
 
   padding: 0.5rem;
   margin: 1rem 0;
-  background-color: #f8ffe5;
+  background-color: #FAF7F0;
 }
 
 .expense-item__description {
@@ -16,7 +16,8 @@
   flex-flow: column-reverse;
   justify-content: flex-start;
   flex: 1;
-  background-color: grey;
+  background-color: #BCCEF8;
+  font-weight:bold;
 }
 
 .expense-item h2 {
