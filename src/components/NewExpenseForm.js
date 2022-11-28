@@ -1,6 +1,39 @@
 import "./ExpenseInternalForm.css";
 
+<<<<<<< Updated upstream
 function NewExpenseForm() {
+=======
+function NewExpenseForm(props) {
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState("");
+
+  const [enteredDatee, setEnteredDatee] = useState("");
+
+  function titleHandler(event) {
+    setEnteredTitle(event.target.value);
+  }
+  function amountHandler(event) {
+    setEnteredAmount(event.target.value);
+  }
+
+  function dateHandler(event) {
+    setEnteredDatee(event.target.value);
+  }
+  function submitHandler(event) {
+    event.preventDefault();
+
+    const expenseData = {
+      title: enteredTitle,
+      amaount: enteredAmount,
+      date: new Date(enteredDatee),
+    };
+
+    props.onSaveExpData(expenseData);
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDatee("");
+  }
+>>>>>>> Stashed changes
   return (
     <form class="w-full max-w-lg ml-40" >
       <div class="flex flex-wrap ">

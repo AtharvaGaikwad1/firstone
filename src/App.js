@@ -22,11 +22,16 @@ function App() {
       time: new Date(2000, 7, 2),
     },
   ];
+
+  function finalExpenseAdd(forwardExpense){
+    console.log("hello we are in app.js");
+    console.log(forwardExpense);
+  }
   return (
     // here we use props whicha are baicaly like paramenters and give data to functions
     <div className="App">
-      <NewExpense />
-      <Expesnses arrOfDummy={arrOfDummy}></Expesnses>
+      <NewExpense giveHere = {finalExpenseAdd} />
+      <Expesnses arrOfDummy={arrOfDummy} ></Expesnses>
     </div>
   );
 }
